@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv6j1d56cl38j"
-path="res://.godot/imported/owl.png-21aa22a2b7c38b1bb90b6dae4aa9779a.ctex"
+uid="uid://diarbh44f3hg3"
+path="res://.godot/imported/icon_godot.svg-bb3ed9a583d369f96fc04afdf669409d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://owl.png"
-dest_files=["res://.godot/imported/owl.png-21aa22a2b7c38b1bb90b6dae4aa9779a.ctex"]
+source_file="res://Icons/icon_godot.svg"
+dest_files=["res://.godot/imported/icon_godot.svg-bb3ed9a583d369f96fc04afdf669409d.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

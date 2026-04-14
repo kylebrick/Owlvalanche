@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://befjo26bldyc1"]
+
+[node name="_MACRO" type="Node2D" unique_id=1567177777]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=2057501875]
