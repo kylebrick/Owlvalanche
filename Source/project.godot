@@ -12,7 +12,8 @@ config_version=5
 
 config/name="Owlvalanche"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://dv6j1d56cl38j"
+config/windows_native_icon="res://owl.ico"
 
 [physics]
 
