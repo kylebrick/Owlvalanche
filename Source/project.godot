@@ -28,6 +28,11 @@ window/size/borderless=true
 window/size/always_on_top=true
 window/size/sharp_corners=true
 window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
+[global_group]
+
+Player="The owl player charracter - there should only be one of these."
 
 [layer_names]
 

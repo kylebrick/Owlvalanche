@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d36lgjrvfe7go"]
+
+[ext_resource type="Texture2D" uid="uid://0e1rp0cwi0vs" path="res://Sprites/spr_owl.png" id="1_gh4yu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gh4yu"]
+size = Vector2(11, 10)
+
+[node name="Player" type="CharacterBody2D" unique_id=647956428]
+
+[node name="SpritePivot" type="Node2D" parent="." unique_id=1580509221]
+position = Vector2(8, 15)
+
+[node name="Sprite" type="Sprite2D" parent="SpritePivot" unique_id=2107777475]
+position = Vector2(-8, -15)
+texture = ExtResource("1_gh4yu")
+centered = false
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=827906509]
+position = Vector2(8.5, 8)
+shape = SubResource("RectangleShape2D_gh4yu")

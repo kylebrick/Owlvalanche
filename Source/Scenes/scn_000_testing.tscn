@@ -1,5 +1,14 @@
 [gd_scene format=3 uid="uid://befjo26bldyc1"]
 
+[ext_resource type="PackedScene" uid="uid://d36lgjrvfe7go" path="res://Objects/obj_player.tscn" id="1_22alj"]
+
 [node name="_MACRO" type="Node2D" unique_id=1567177777]
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=2057501875]
+[node name="UI" type="Control" parent="." unique_id=683810832]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player" parent="." unique_id=647956428 instance=ExtResource("1_22alj")]
+position = Vector2(890, 455)
