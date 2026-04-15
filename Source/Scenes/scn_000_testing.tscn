@@ -15,12 +15,7 @@ offset_bottom = 40.0
 texture = ExtResource("1_wvc4e")
 
 [node name="Player" parent="." unique_id=647956428 instance=ExtResource("1_22alj")]
-walk_spd = null
-walk_accel = null
-walk_frict = null
-shoe_step_spd = null
-shoe_step_time = null
-board_accel = null
-board_frict = null
-board_turn_spd = null
-move_spd = null
+walk_frict = 1000.0
+shoe_step_spd = 20.0
+shoe_step_time = 0.25
+board_turn_spd = 3.5
