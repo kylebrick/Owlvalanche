@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://befjo26bldyc1"]
 
 [ext_resource type="PackedScene" uid="uid://d36lgjrvfe7go" path="res://Objects/obj_player.tscn" id="1_22alj"]
+[ext_resource type="Texture2D" uid="uid://d4jjvapp76dom" path="res://Backgrounds/bgr_testing.png" id="1_wvc4e"]
 
 [node name="_MACRO" type="Node2D" unique_id=1567177777]
 
@@ -10,5 +11,15 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Background" type="Sprite2D" parent="." unique_id=2119365582]
+texture = ExtResource("1_wvc4e")
+
 [node name="Player" parent="." unique_id=647956428 instance=ExtResource("1_22alj")]
-position = Vector2(890, 455)
+walk_accel = null
+walk_frict = null
+shoe_step_spd = null
+shoe_step_time = null
+board_accel = null
+board_frict = null
+board_turn_spd = null
+move_spd = null
