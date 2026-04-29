@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 #region - Nodes
 
-@onready var sprite: 		Sprite2D			= $SpritePivot/Sprite;
+@onready var sprite: 		AnimatedSprite2D			= $SpritePivot/Sprite;
 
 #endregion
 #region = Vars
@@ -87,9 +87,9 @@ func _physics_process(delta: float) -> void:
 	
 	#State Machine
 	match state:
-		0: move_neutral(delta); 	sprite.texture = spr_walk;
-		1: move_snowshoes(delta); 	sprite.texture = spr_shoes;
-		2: move_skiing(delta); 		sprite.texture = spr_skiis;
-		3: move_snowboard(delta); 	sprite.texture = spr_board;
+		0: move_neutral(delta); 	#sprite.texture = spr_walk;
+		1: move_snowshoes(delta); 	#sprite.texture = spr_shoes;
+		2: move_skiing(delta); 		#sprite.texture = spr_skiis;
+		3: move_snowboard(delta); 	#sprite.texture = spr_board;
 	move_and_slide();
 	debug();
