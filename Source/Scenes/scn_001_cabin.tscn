@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://ci7g3sxwkvkcj"]
 
+[ext_resource type="Script" uid="uid://ct8048a2cc301" path="res://Scenes/scr_dior_player.gd" id="1_n5my4"]
 [ext_resource type="Texture2D" uid="uid://dy5ehd3myy4ne" path="res://Sprites/spr_owl_rpg_walk_down.png" id="1_tef26"]
-[ext_resource type="Texture2D" uid="uid://0e1rp0cwi0vs" path="res://Sprites/spr_owl.png" id="2_n5my4"]
 
 [sub_resource type="Environment" id="Environment_tef26"]
+background_mode = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n5my4"]
 atlas = ExtResource("1_tef26")
@@ -84,18 +85,34 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tef26"]
+radius = 0.05
+height = 0.15
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5my4"]
+size = Vector3(1.5, 0.1, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ry7dk"]
+size = Vector3(1.5, 0.1, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ry7dk"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n5my4"]
+size = Vector3(0.25, 0.25, 0.25)
 
 [node name="_MACRO" type="Node3D" unique_id=1247256207]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1119168805]
 environment = SubResource("Environment_tef26")
 
-[node name="PlayerDiorama" type="CharacterBody3D" parent="." unique_id=463106008]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1327318949]
+transform = Transform3D(0.7071068, 0.35355338, -0.61237246, 0, 0.8660254, 0.50000006, 0.7071068, -0.35355338, 0.61237246, 0, 1, 0)
 
-[node name="Sprite3D" type="Sprite3D" parent="PlayerDiorama" unique_id=950722627]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18240711, -0.0122019425, 0)
-texture_filter = 0
-texture = ExtResource("2_n5my4")
+[node name="PlayerDiorama" type="CharacterBody3D" parent="." unique_id=463106008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23291439, 0)
+script = ExtResource("1_n5my4")
+SPEED = 0.4
+JUMP_VELOCITY = 1.25
 
 [node name="AnimSprite" type="AnimatedSprite3D" parent="PlayerDiorama" unique_id=714240312]
 texture_filter = 0
@@ -104,12 +121,29 @@ animation = &"Walk Down"
 autoplay = "Walk Down"
 
 [node name="Collision" type="CollisionShape3D" parent="PlayerDiorama" unique_id=190358896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015570104, 0)
 shape = SubResource("CapsuleShape3D_tef26")
 
 [node name="Camera" type="Camera3D" parent="PlayerDiorama" unique_id=365719867]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.5)
 current = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1182108676]
+[node name="Ground" type="StaticBody3D" parent="." unique_id=520398170]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
-size = Vector3(1.5, 0.1, 0.5)
+
+[node name="Collision" type="CollisionShape3D" parent="Ground" unique_id=1310531389]
+shape = SubResource("BoxShape3D_n5my4")
+
+[node name="Mesh" type="MeshInstance3D" parent="Ground" unique_id=88858387]
+mesh = SubResource("BoxMesh_ry7dk")
+
+[node name="Teleporter" type="Area3D" parent="." unique_id=206333144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56050414, 0, 0)
+
+[node name="Collision" type="CollisionShape3D" parent="Teleporter" unique_id=1036707586]
+shape = SubResource("BoxShape3D_ry7dk")
+
+[node name="Mesh" type="MeshInstance3D" parent="Teleporter" unique_id=1072668727]
+mesh = SubResource("BoxMesh_n5my4")
+
+[connection signal="body_entered" from="Teleporter" to="PlayerDiorama" method="_on_teleporter_body_entered"]
