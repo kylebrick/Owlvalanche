@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bg7p87nnwj4wx"
+path="res://.godot/imported/sfx_depresso_walk.wav-7ffff6708d007154d9e89a0ed9cd004e.sample"
+
+[deps]
+
+source_file="res://Levels/02 - Sidescroller/sfx_depresso_walk.wav"
+dest_files=["res://.godot/imported/sfx_depresso_walk.wav-7ffff6708d007154d9e89a0ed9cd004e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

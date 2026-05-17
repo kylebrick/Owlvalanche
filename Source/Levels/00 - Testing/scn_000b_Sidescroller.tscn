@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dpbd45hb8i7as"]
+
+[ext_resource type="Script" uid="uid://jl7eomghif71" path="res://Levels/00 - Testing/scr_scene_change_debug.gd" id="1_o8qxn"]
+[ext_resource type="Texture2D" uid="uid://0e1rp0cwi0vs" path="res://Sprites/spr_owl.png" id="1_sbf5u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8qxn"]
+
+[node name="MACRO" type="Node2D" unique_id=352515736]
+script = ExtResource("1_o8qxn")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1995982857]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2067255627]
+texture = ExtResource("1_sbf5u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=792985819]
+shape = SubResource("RectangleShape2D_o8qxn")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=881537136]

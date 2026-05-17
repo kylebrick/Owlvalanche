@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://blc8d2hi6oowp"]
+
+[ext_resource type="Texture2D" uid="uid://cs7vbvn5jnu2q" path="res://spr_depresso_wings.png" id="1_irmf5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_153l4"]
+atlas = ExtResource("1_irmf5")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gy12"]
+atlas = ExtResource("1_irmf5")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j63o7"]
+atlas = ExtResource("1_irmf5")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pke0"]
+atlas = ExtResource("1_irmf5")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibovd"]
+atlas = ExtResource("1_irmf5")
+region = Rect2(96, 0, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_153l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gy12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j63o7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pke0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibovd")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]

@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://c6st8kfm2mh84"]
+
+[ext_resource type="Script" uid="uid://nwnc6cxgyfc4" path="res://Scripts/scr_player_sidescroller.gd" id="2_qfmfx"]
+[ext_resource type="Texture2D" uid="uid://dy5ehd3myy4ne" path="res://Sprites/spr_owl_rpg_walk_down.png" id="2_xultb"]
+[ext_resource type="PackedScene" path="res://Levels/02 - Sidescroller/fx_footsteps.tscn" id="3_xultb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75kfv"]
+atlas = ExtResource("2_xultb")
+region = Rect2(0, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfy34"]
+atlas = ExtResource("2_xultb")
+region = Rect2(19, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l56h4"]
+atlas = ExtResource("2_xultb")
+region = Rect2(38, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6rgy"]
+atlas = ExtResource("2_xultb")
+region = Rect2(57, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j613p"]
+atlas = ExtResource("2_xultb")
+region = Rect2(76, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7i6ph"]
+atlas = ExtResource("2_xultb")
+region = Rect2(95, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkpsm"]
+atlas = ExtResource("2_xultb")
+region = Rect2(114, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_565k4"]
+atlas = ExtResource("2_xultb")
+region = Rect2(133, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkxn2"]
+atlas = ExtResource("2_xultb")
+region = Rect2(152, 0, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rxbr"]
+atlas = ExtResource("2_xultb")
+region = Rect2(171, 0, 19, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxu0p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75kfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfy34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l56h4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6rgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j613p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7i6ph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkpsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_565k4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkxn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rxbr")
+}],
+"loop": true,
+"name": &"Walk Down",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajc2v"]
+size = Vector2(10, 12)
+
+[node name="PlayerSidescroller" type="CharacterBody2D" unique_id=1896250234]
+script = ExtResource("2_qfmfx")
+
+[node name="SpritePivot" type="Node2D" parent="." unique_id=619727634]
+position = Vector2(0, 6)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="SpritePivot" unique_id=372170615]
+texture_filter = 1
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_nxu0p")
+animation = &"Walk Down"
+
+[node name="FXFootsteps" parent="." unique_id=511559269 instance=ExtResource("3_xultb")]
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=178894396]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ajc2v")
+
+[node name="CoyoteTime" type="Timer" parent="." unique_id=2053047039]
+
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=327759077]

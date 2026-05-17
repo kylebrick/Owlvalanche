@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cj2wx0fpvj3ep"]
+
+[ext_resource type="Texture2D" uid="uid://bsg2oix80joma" path="res://Levels/02 - Sidescroller/spr_fx_smoke01.png" id="1_fvcgx"]
+[ext_resource type="Texture2D" uid="uid://dfyhdlmk6g8pl" path="res://Levels/02 - Sidescroller/spr_fx_smoke02.png" id="2_h7n8d"]
+[ext_resource type="Texture2D" uid="uid://bm0ul1pb86hf3" path="res://Levels/02 - Sidescroller/spr_fx_smoke03.png" id="3_kdi2r"]
+[ext_resource type="Texture2D" uid="uid://bigvxcn06wcad" path="res://Levels/02 - Sidescroller/spr_fx_smoke04.png" id="4_1aqbg"]
+[ext_resource type="Texture2D" uid="uid://d2rovbitkwvqs" path="res://Levels/02 - Sidescroller/spr_fx_smoke05.png" id="5_koid2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_i11mk"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_l4lcr"]
+frames = 5
+frame_0/texture = ExtResource("1_fvcgx")
+frame_1/texture = ExtResource("2_h7n8d")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_kdi2r")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_1aqbg")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_koid2")
+frame_4/duration = 1.0
+
+[sub_resource type="Curve" id="Curve_i11mk"]
+_data = [Vector2(0, 0.8475967), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_05xpo"]
+offsets = PackedFloat32Array(0, 0.5608974, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="FXFootsteps" type="CPUParticles2D" unique_id=511559269]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_i11mk")
+emitting = false
+amount = 1
+texture = SubResource("AnimatedTexture_l4lcr")
+lifetime = 0.25
+direction = Vector2(0, -1)
+spread = 65.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+angular_velocity_min = -80.0
+angular_velocity_max = 80.0
+scale_amount_min = 0.8
+scale_amount_max = 1.2
+scale_amount_curve = SubResource("Curve_i11mk")
+color_ramp = SubResource("Gradient_05xpo")
+anim_offset_max = 1.0

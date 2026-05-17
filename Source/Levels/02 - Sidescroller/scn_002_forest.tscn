@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://iwnevllbye1v"]
+
+[ext_resource type="AudioStream" uid="uid://b4ulu6rqjju5c" path="res://Levels/02 - Sidescroller/sfx_depresso_crouch.wav" id="1_farhx"]
+[ext_resource type="AudioStream" uid="uid://cu014hnvnhb76" path="res://Music/mus_overworld.wav" id="1_k8fo0"]
+[ext_resource type="AudioStream" uid="uid://bv12v8im4yp12" path="res://Levels/02 - Sidescroller/sfx_depresso_jump.wav" id="2_hu0ng"]
+[ext_resource type="AudioStream" uid="uid://bhyfgp3uabxls" path="res://Levels/02 - Sidescroller/sfx_depresso_super_crouch.wav" id="3_jxwux"]
+[ext_resource type="PackedScene" uid="uid://c6st8kfm2mh84" path="res://Levels/02 - Sidescroller/obj_player_sidescroller.tscn" id="4_2asto"]
+[ext_resource type="AudioStream" uid="uid://bg7p87nnwj4wx" path="res://Levels/02 - Sidescroller/sfx_depresso_walk.wav" id="4_cvl12"]
+[ext_resource type="Texture2D" uid="uid://diarbh44f3hg3" path="res://Icons/icon_godot.svg" id="4_vmg0d"]
+[ext_resource type="AudioStream" uid="uid://bnmpqqv5cwyuj" path="res://Levels/02 - Sidescroller/sfx_depresso_wings.wav" id="5_1wll3"]
+[ext_resource type="Script" uid="uid://c5p83h344kb1r" path="res://Scripts/scr_camera.gd" id="5_dh3e3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2asto"]
+size = Vector2(128, 128)
+
+[node name="_MACRO" type="Node2D" unique_id=1567177777]
+
+[node name="UI" type="Control" parent="." unique_id=683810832]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SFX" type="Node" parent="." unique_id=134809435]
+
+[node name="SfxDepressoCrouch" type="AudioStreamPlayer" parent="SFX" unique_id=1012988255]
+stream = ExtResource("1_farhx")
+
+[node name="SfxDepressoJump" type="AudioStreamPlayer" parent="SFX" unique_id=1541472858]
+stream = ExtResource("2_hu0ng")
+
+[node name="SfxDepressoSuperCrouch" type="AudioStreamPlayer" parent="SFX" unique_id=890757998]
+stream = ExtResource("3_jxwux")
+
+[node name="SfxDepressoWalk" type="AudioStreamPlayer" parent="SFX" unique_id=1036993902]
+stream = ExtResource("4_cvl12")
+
+[node name="SfxDepressoWings" type="AudioStreamPlayer" parent="SFX" unique_id=287852189]
+stream = ExtResource("5_1wll3")
+
+[node name="MusOverworld" type="AudioStreamPlayer" parent="." unique_id=952254962]
+stream = ExtResource("1_k8fo0")
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=457180607]
+scale = Vector2(8, 8)
+transform = Transform2D(8, 0, 0, 8, 0, 0)
+follow_viewport_enabled = true
+
+[node name="PlayerSidescroller" parent="Canvas" unique_id=1896250234 node_paths=PackedStringArray("sfx_jump", "sfx_wings", "sfx_walk", "sfx_crouch", "sfx_super_crouch") instance=ExtResource("4_2asto")]
+sfx_jump = NodePath("../../SFX/SfxDepressoJump")
+sfx_wings = NodePath("../../SFX/SfxDepressoWings")
+sfx_walk = NodePath("../../SFX/SfxDepressoWalk")
+sfx_crouch = NodePath("../../SFX/SfxDepressoCrouch")
+sfx_super_crouch = NodePath("../../SFX/SfxDepressoSuperCrouch")
+
+[node name="Geometry" type="Node2D" parent="Canvas" unique_id=1962154179]
+
+[node name="Geom1" type="StaticBody2D" parent="Canvas/Geometry" unique_id=1607888374]
+position = Vector2(5.7500305, 213)
+scale = Vector2(3.0400016, 1)
+
+[node name="Sprite" type="Sprite2D" parent="Canvas/Geometry/Geom1" unique_id=1840869492]
+texture = ExtResource("4_vmg0d")
+
+[node name="Collision" type="CollisionShape2D" parent="Canvas/Geometry/Geom1" unique_id=2078651060]
+shape = SubResource("RectangleShape2D_2asto")
+
+[node name="Geom2" type="StaticBody2D" parent="Canvas/Geometry" unique_id=1588588479]
+position = Vector2(227.75003, 478.125)
+scale = Vector2(3.0400016, 1)
+
+[node name="Sprite" type="Sprite2D" parent="Canvas/Geometry/Geom2" unique_id=735833413]
+texture = ExtResource("4_vmg0d")
+
+[node name="Collision" type="CollisionShape2D" parent="Canvas/Geometry/Geom2" unique_id=1307990902]
+shape = SubResource("RectangleShape2D_2asto")
+
+[node name="Geom3" type="StaticBody2D" parent="Canvas/Geometry" unique_id=305247857]
+position = Vector2(-289.75, 739.875)
+scale = Vector2(3.0400016, 1)
+
+[node name="Sprite" type="Sprite2D" parent="Canvas/Geometry/Geom3" unique_id=1986549340]
+texture = ExtResource("4_vmg0d")
+
+[node name="Collision" type="CollisionShape2D" parent="Canvas/Geometry/Geom3" unique_id=715635516]
+shape = SubResource("RectangleShape2D_2asto")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1922285766 node_paths=PackedStringArray("target")]
+texture_filter = 1
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 240
+limit_bottom = 135
+script = ExtResource("5_dh3e3")
+target = NodePath("../Canvas/PlayerSidescroller")

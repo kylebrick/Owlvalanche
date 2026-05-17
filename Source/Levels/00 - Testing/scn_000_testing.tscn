@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ds0ic106bjuph"]
+
+[ext_resource type="Texture2D" uid="uid://diarbh44f3hg3" path="res://Icons/icon_godot.svg" id="1_npmbm"]
+[ext_resource type="Script" uid="uid://c1jd7x4faxjt6" path="res://Levels/00 - Testing/scr_my_sprite.gd" id="2_uyj3a"]
+
+[node name="Scn000Testing" type="Node2D" unique_id=712738146]
+
+[node name="MySprite" type="Sprite2D" parent="." unique_id=804180456]
+position = Vector2(551, 389)
+texture = ExtResource("1_npmbm")
+script = ExtResource("2_uyj3a")

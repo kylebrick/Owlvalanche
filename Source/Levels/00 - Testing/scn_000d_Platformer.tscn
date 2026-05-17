@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ct45i8toqdt7n"]
+
+[ext_resource type="Script" uid="uid://jl7eomghif71" path="res://Levels/00 - Testing/scr_scene_change_debug.gd" id="1_tj8ng"]
+[ext_resource type="Texture2D" uid="uid://0e1rp0cwi0vs" path="res://Sprites/spr_owl.png" id="1_wfj8b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7iuqk"]
+
+[node name="MACRO" type="Node3D" unique_id=1816206114]
+script = ExtResource("1_tj8ng")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1478887395]
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=1551079372]
+transform = Transform3D(0.33678383, 0.33678383, 0.87929136, -0.70710677, 0.70710677, 0, -0.62175286, -0.62175286, 0.47628427, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("1_wfj8b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=122852831]
+shape = SubResource("BoxShape3D_7iuqk")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1683387940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
