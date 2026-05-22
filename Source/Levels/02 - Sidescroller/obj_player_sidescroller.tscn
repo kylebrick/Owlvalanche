@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://nwnc6cxgyfc4" path="res://Scripts/scr_player_sidescroller.gd" id="2_qfmfx"]
 [ext_resource type="Texture2D" uid="uid://dy5ehd3myy4ne" path="res://Sprites/spr_owl_rpg_walk_down.png" id="2_xultb"]
-[ext_resource type="PackedScene" path="res://Levels/02 - Sidescroller/fx_footsteps.tscn" id="3_xultb"]
+[ext_resource type="PackedScene" uid="uid://cj2wx0fpvj3ep" path="res://Levels/02 - Sidescroller/fx_footsteps.tscn" id="3_xultb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_75kfv"]
 atlas = ExtResource("2_xultb")

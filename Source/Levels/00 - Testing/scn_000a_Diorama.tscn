@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://1dv6pu87bst6"]
 
 [ext_resource type="Texture2D" uid="uid://0e1rp0cwi0vs" path="res://Sprites/spr_owl.png" id="1_1l1xt"]
-[ext_resource type="Script" uid="uid://jl7eomghif71" path="res://Levels/00 - Testing/scr_scene_change_debug.gd" id="1_7iuqk"]
+[ext_resource type="Script" uid="uid://jl7eomghif71" path="res://Scripts/scr_scene_change_debug.gd" id="1_7iuqk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7iuqk"]
 
