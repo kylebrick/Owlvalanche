@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d20o4eq0fwbss"]
+
+[ext_resource type="Script" uid="uid://wr2ej6jqi0i0" path="res://Scripts/scr_trigger_warp.gd" id="1_1ru6g"]
+[ext_resource type="Texture2D" uid="uid://0n3a8cdu5nip" path="res://Sprites/spr_hole.png" id="2_tj47q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3h3mc"]
+size = Vector2(12, 10)
+
+[node name="TriggerWarp" type="Area2D" unique_id=885470708]
+script = ExtResource("1_1ru6g")
+next_scn = "res://Levels/00 - Testing/scn_000f_testing.tscn"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=746473855]
+texture = ExtResource("2_tj47q")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1214778265]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_3h3mc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

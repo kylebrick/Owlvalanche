@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 #Vars
 @onready 	var anim_spr: 	AnimatedSprite2D 	= $Sprite;
@@ -7,7 +8,8 @@ extends CharacterBody2D
 var sprint: bool = false;
 
 #Create
-func _ready() -> void: pass;
+func _ready() -> void:
+	position = Director.pl_spawn_pos;
 
 #Step - Phy
 func _process(delta: float) -> void:

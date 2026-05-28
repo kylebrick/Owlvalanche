@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0xqp07806n0r"]
 
 [ext_resource type="Texture2D" uid="uid://0e1rp0cwi0vs" path="res://Sprites/spr_owl.png" id="1_5ik1l"]
-[ext_resource type="Script" uid="uid://jl7eomghif71" path="res://Scripts/scr_scene_change_debug.gd" id="1_6bimw"]
+[ext_resource type="Script" uid="uid://jl7eomghif71" path="res://Scripts/spr_trigger_warp_debug.gd" id="1_6bimw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8qxn"]
 

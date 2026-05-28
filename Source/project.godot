@@ -20,6 +20,10 @@ boot_splash/image="uid://dwghxi1pw8lty"
 config/icon="uid://dwghxi1pw8lty"
 config/windows_native_icon="res://Icons/icon_owl_pfp.ico"
 
+[autoload]
+
+Director="*uid://jc2dcji52jl7"
+
 [display]
 
 window/size/viewport_width=320

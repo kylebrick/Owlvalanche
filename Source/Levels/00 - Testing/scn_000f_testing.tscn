@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cbsk561ieo5e"]
+
+[ext_resource type="PackedScene" uid="uid://c7aaah7ypbvd5" path="res://Objects/obj_player_rpg_test.tscn" id="1_7avd2"]
+[ext_resource type="PackedScene" uid="uid://d20o4eq0fwbss" path="res://Objects/obj_trigger_warp.tscn" id="2_vunup"]
+
+[node name="MACRO" type="Node2D" unique_id=2067226981]
+
+[node name="TriggerWarp" parent="." unique_id=885470708 instance=ExtResource("2_vunup")]
+position = Vector2(-21, 2)
+next_scn = "res://Levels/00 - Testing/scn_000e_testing.tscn"
+pl_spawn_pos = Vector2(-360, -7)
+
+[node name="OwlRPG" parent="." unique_id=363444383 instance=ExtResource("1_7avd2")]

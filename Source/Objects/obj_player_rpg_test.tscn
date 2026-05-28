@@ -302,7 +302,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msifc"]
 size = Vector2(12, 10)
 
-[node name="OwlRPG" type="CharacterBody2D" unique_id=363444383]
+[node name="OwlRPG" type="CharacterBody2D" unique_id=363444383 groups=["Player"]]
 script = ExtResource("1_pol5s")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1773659715]
@@ -312,3 +312,10 @@ animation = &"walk_down"
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1829661341]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_msifc")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=484874674]
+limit_left = -640
+limit_top = -640
+limit_right = 640
+limit_bottom = 640
+position_smoothing_speed = 8.0
