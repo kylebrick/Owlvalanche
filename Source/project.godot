@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Owlvalanche"
+config/tags=PackedStringArray("main")
 run/main_scene="uid://ds0ic106bjuph"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=60
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="uid://dv6j1d56cl38j"
-config/icon="uid://dv6j1d56cl38j"
-config/windows_native_icon="res://Icons/icon_owl.ico"
+boot_splash/image="uid://dwghxi1pw8lty"
+config/icon="uid://dwghxi1pw8lty"
+config/windows_native_icon="res://Icons/icon_owl_pfp.ico"
 
 [display]
 
