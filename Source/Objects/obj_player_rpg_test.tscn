@@ -312,6 +312,7 @@ size = Vector2(12, 10)
 
 [node name="OwlRPG" type="CharacterBody2D" unique_id=363444383 groups=["Player"]]
 script = ExtResource("1_pol5s")
+push_str = 200
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1773659715]
 sprite_frames = SubResource("SpriteFrames_3qqoo")

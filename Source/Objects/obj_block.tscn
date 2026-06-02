@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bhdwclrwmxckd"]
+
+[ext_resource type="Texture2D" uid="uid://bvqge81qyew87" path="res://Sprites/spr_block.png" id="1_83rl4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsfk7"]
+size = Vector2(16, 16)
+
+[node name="Block" type="RigidBody2D" unique_id=397370076 groups=["Blocks"]]
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 10.0
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1919337038]
+shape = SubResource("RectangleShape2D_vsfk7")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1460380216]
+texture = ExtResource("1_83rl4")

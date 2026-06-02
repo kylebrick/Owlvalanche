@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c7aaah7ypbvd5" path="res://Objects/obj_player_rpg_test.tscn" id="1_7avd2"]
 [ext_resource type="Texture2D" uid="uid://u6n2x7jyaix" path="res://Tilesets/tiles_cabin.png" id="1_j1p35"]
 [ext_resource type="PackedScene" uid="uid://d20o4eq0fwbss" path="res://Objects/obj_trigger_warp.tscn" id="2_vunup"]
+[ext_resource type="PackedScene" uid="uid://bhdwclrwmxckd" path="res://Objects/obj_block.tscn" id="4_nevap"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nevap"]
 texture = ExtResource("1_j1p35")
@@ -178,3 +179,12 @@ next_scn = "res://Levels/00 - Testing/scn_000e_testing.tscn"
 pl_spawn_pos = Vector2(-360, -7)
 
 [node name="OwlRPG" parent="." unique_id=363444383 instance=ExtResource("1_7avd2")]
+
+[node name="Block" parent="." unique_id=397370076 instance=ExtResource("4_nevap")]
+position = Vector2(23, -44)
+
+[node name="Block2" parent="." unique_id=1490700228 instance=ExtResource("4_nevap")]
+position = Vector2(72, 3)
+
+[node name="Block3" parent="." unique_id=770046423 instance=ExtResource("4_nevap")]
+position = Vector2(40, 43)
