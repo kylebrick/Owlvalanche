@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cr1xol1tf8igf" path="res://Scripts/scr_player_rpg_test.gd" id="1_pol5s"]
 [ext_resource type="Texture2D" uid="uid://cd6m5chdvw0tg" path="res://Sprites/spr_owlval_PlayerOwlTest.png" id="2_bxm5x"]
+[ext_resource type="Texture2D" uid="uid://ohp68s756nsn" path="res://Sprites/spr_shadow.png" id="2_nlwoi"]
 [ext_resource type="Texture2D" uid="uid://d2x8aenhyhc5" path="res://Sprites/spr_owl_rpg_walk_test.png" id="2_pol5s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nlwoi"]
@@ -313,6 +314,11 @@ size = Vector2(12, 10)
 [node name="OwlRPG" type="CharacterBody2D" unique_id=363444383 groups=["Player"]]
 script = ExtResource("1_pol5s")
 push_str = 200
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=783463480]
+position = Vector2(-1, 4)
+texture = ExtResource("2_nlwoi")
+offset = Vector2(0, 2)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1773659715]
 sprite_frames = SubResource("SpriteFrames_3qqoo")
