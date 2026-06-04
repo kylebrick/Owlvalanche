@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfygsmmldjcx"
-path="res://.godot/imported/spr_owl_jump.png-adbb6aedc4d8b890e51ecd368f379672.ctex"
+uid="uid://de6t7fu144ils"
+path="res://.godot/imported/spr_owl_walk_right.png-fa5ec87a689cc88b05cdadac078a476d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/spr_owl_jump.png"
-dest_files=["res://.godot/imported/spr_owl_jump.png-adbb6aedc4d8b890e51ecd368f379672.ctex"]
+source_file="res://Sprites/Owl/spr_owl_walk_right.png"
+dest_files=["res://.godot/imported/spr_owl_walk_right.png-fa5ec87a689cc88b05cdadac078a476d.ctex"]
 
 [params]
 

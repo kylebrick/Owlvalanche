@@ -18,7 +18,9 @@ var double_jumping:			bool				= false;
 var landed:					bool				= false;
 
 #Create
-func _ready() -> void: position = Director.pl_spawn_pos;
+func _ready() -> void: 
+	position = Director.pl_spawn_pos;
+	if(shad_spr.visible == true): shad_spr.visible = false;
 
 #Step
 func _physics_process(delta: float) -> void:
@@ -47,6 +49,7 @@ func _physics_process(delta: float) -> void:
 			jumping = false;
 			double_jumping = false;
 			shad_spr.visible = false;
+			anim_spr.play("walk_down");
 			
 	#Offset Sprite w/ Jump
 	anim_spr.position.y = -z_pos;
@@ -57,12 +60,16 @@ func _physics_process(delta: float) -> void:
 	shad_spr.modulate.a = shad_scale;
 	
 	#Animation
-	if	(velocity.x > 0): anim_spr.play("walk_right");
-	elif(velocity.x < 0): anim_spr.play("walk_left");
-	elif(velocity.y > 0): anim_spr.play("walk_down");
-	elif(velocity.y < 0): anim_spr.play("walk_up");
-	elif(velocity == Vector2.ZERO):
-		anim_spr.stop(); anim_spr.frame = 0;
+	if(!jumping):
+		if	(velocity.x < 0): anim_spr.play("walk_right"); anim_spr.flip_h = true;
+		elif(velocity.x > 0): anim_spr.play("walk_right"); anim_spr.flip_h = false;
+		elif(velocity.y > 0): anim_spr.play("walk_down");	anim_spr.flip_h = false;
+		elif(velocity.y < 0): anim_spr.play("walk_up");	anim_spr.flip_h = false;
+		elif(velocity == Vector2.ZERO):
+			anim_spr.stop(); anim_spr.frame = 0;
+	else:
+		anim_spr.play("jump");
+		anim_spr.frame = 0;
 	
 	#Check last collision
 	#If it's the block... push it.
