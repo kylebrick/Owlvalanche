@@ -336,7 +336,7 @@ offset = Vector2(0, 2)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1773659715]
 sprite_frames = SubResource("SpriteFrames_3qqoo")
-animation = &"walk_up"
+animation = &"walk_right"
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1829661341]
 position = Vector2(0, 3)
